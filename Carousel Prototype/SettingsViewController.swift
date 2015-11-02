@@ -27,6 +27,23 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func dismissSettings(sender: AnyObject) {
+        
+          self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    //@IBAction func pressSignOut(sender: AnyObject) {
+        //let alertController = UIAlertController(title: "Log Out", message: "Are you sure??", preferredStyle: .ActionSheet)
+        //let logoutAction = UIAlertAction(title: "Log Out", style: .Destructive) { (action) in
+                //performSegueWithIdentifier(signOutSegue, sender: self)
+        //}
+
+    //}
+
+
+    }
+
 
     /*
     // MARK: - Navigation
@@ -38,4 +55,4 @@ class SettingsViewController: UIViewController {
     }
     */
 
-}
+

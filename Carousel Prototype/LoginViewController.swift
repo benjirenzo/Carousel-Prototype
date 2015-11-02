@@ -98,9 +98,10 @@ class LoginViewController: UIViewController {
     }
     
     
-    @IBAction func tapToHideKeyboard(sender: AnyObject) {
+    @IBAction func hideKeyboard(sender: AnyObject) {
         view.endEditing(true)
     }
+
     
     @IBAction func tapSignIn(sender: AnyObject) {
         if emailField.text!.isEmpty || passwordField.text!.isEmpty {

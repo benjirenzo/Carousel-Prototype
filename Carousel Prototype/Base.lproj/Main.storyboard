@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="WC0-cP-Jse">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="PA8-VN-S4b">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -186,6 +186,11 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="MF8-H2-pbY" appends="YES" id="dah-rM-UCR"/>
+                            <outletCollection property="gestureRecognizers" destination="MF8-H2-pbY" appends="YES" id="5K8-bo-rDq"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="O1C-iv-TVx"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -201,9 +206,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EnB-vq-Amp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="j0h-hs-Nc5">
+                <tapGestureRecognizer id="MF8-H2-pbY">
                     <connections>
-                        <action selector="tapToHideKeyboard:" destination="PA8-VN-S4b" id="7jV-uR-1Rs"/>
+                        <action selector="hideKeyboard:" destination="PA8-VN-S4b" id="Bu1-tq-79g"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -246,6 +251,15 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                         <animations/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GkI-3z-ecY">
+                                        <rect key="frame" x="981" y="488" width="281" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <segue destination="WC0-cP-Jse" kind="modal" id="qlk-4w-bXP"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <animations/>
                             </scrollView>
@@ -392,9 +406,27 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oIT-t8-yDd">
+                                        <rect key="frame" x="8" y="620" width="304" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <segue destination="wmO-xE-bbN" kind="modal" modalTransitionStyle="crossDissolve" id="3o2-0i-2DR"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <animations/>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gIQ-SU-Gbp">
+                                <rect key="frame" x="9" y="17" width="36" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="dismissSettings:" destination="Vd8-Du-wQ5" eventType="touchUpInside" id="UF5-iR-xMG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -408,7 +440,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="scq-4m-k5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5008" y="357"/>
+            <point key="canvasLocation" x="5008" y="356.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fIP-tg-6S1">
