@@ -121,6 +121,9 @@ class LoginViewController: UIViewController {
         }
     }
     
+    @IBAction func goBackFromSignIn(sender: AnyObject) {
+            navigationController?.popViewControllerAnimated(true)
+    }
     /*
     // MARK: - Navigation
 
