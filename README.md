@@ -11,3 +11,5 @@ Paging through intro flow / Feed Scroll / Conversations push view / Settings mod
 Optionals: On final page of intro flow paging dots dissapear and "Take Carousel for a Spin" button appears / On sign out user is
 shown an action sheet alert asking if they are sure they want to sign out.
 
+![canvas animation](https://github.com/benjirenzo/Carousel-Prototype/blob/master/Carousel%20Prototype7.gif?raw=true)
+
