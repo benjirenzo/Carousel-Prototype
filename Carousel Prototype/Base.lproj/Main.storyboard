@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="PA8-VN-S4b">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="wmO-xE-bbN">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -61,7 +61,6 @@
                                         <rect key="frame" x="20" y="1066" width="280" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
-                                        <state key="normal" title="Button"/>
                                         <connections>
                                             <segue destination="PA8-VN-S4b" kind="push" id="iit-vE-Ub0"/>
                                         </connections>
@@ -120,7 +119,6 @@
                                                 <rect key="frame" x="0.0" y="34" width="280" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <animations/>
-                                                <state key="normal" title="Button"/>
                                                 <connections>
                                                     <action selector="tapSignIn:" destination="PA8-VN-S4b" eventType="touchUpInside" id="DJo-1y-DH3"/>
                                                 </connections>
@@ -155,7 +153,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="create_text" id="XtQ-yi-X5A">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
@@ -182,6 +180,10 @@
                                     </imageView>
                                 </subviews>
                                 <animations/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="MF8-H2-pbY" appends="YES" id="kHu-fG-Lqr"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <animations/>
@@ -190,6 +192,7 @@
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="MF8-H2-pbY" appends="YES" id="dah-rM-UCR"/>
                             <outletCollection property="gestureRecognizers" destination="MF8-H2-pbY" appends="YES" id="5K8-bo-rDq"/>
+                            <outletCollection property="gestureRecognizers" destination="MF8-H2-pbY" appends="YES" id="YCP-Sj-YOL"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="O1C-iv-TVx"/>
@@ -255,7 +258,6 @@
                                         <rect key="frame" x="981" y="488" width="281" height="43"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
-                                        <state key="normal" title="Button"/>
                                         <connections>
                                             <segue destination="WC0-cP-Jse" kind="modal" id="qlk-4w-bXP"/>
                                         </connections>
@@ -320,7 +322,6 @@
                                 <rect key="frame" x="274" y="20" width="46" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="SAA-g0-SQn" kind="push" id="Cuq-yC-Bp1"/>
                                 </connections>
@@ -329,7 +330,6 @@
                                 <rect key="frame" x="0.0" y="18" width="51" height="41.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="Vd8-Du-wQ5" kind="modal" id="mkg-vV-F2u"/>
                                 </connections>
@@ -367,7 +367,6 @@
                                 <rect key="frame" x="6" y="20" width="46" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="goBackFromConversations:" destination="SAA-g0-SQn" eventType="touchUpInside" id="KJf-ut-qoY"/>
                                 </connections>
@@ -410,9 +409,8 @@
                                         <rect key="frame" x="8" y="620" width="304" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
-                                        <state key="normal" title="Button"/>
                                         <connections>
-                                            <segue destination="wmO-xE-bbN" kind="modal" modalTransitionStyle="crossDissolve" id="3o2-0i-2DR"/>
+                                            <action selector="signOut:" destination="Vd8-Du-wQ5" eventType="touchUpInside" id="Hqs-dL-FX4"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -422,7 +420,6 @@
                                 <rect key="frame" x="9" y="17" width="36" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="dismissSettings:" destination="Vd8-Du-wQ5" eventType="touchUpInside" id="UF5-iR-xMG"/>
                                 </connections>
@@ -436,6 +433,7 @@
                     <connections>
                         <outlet property="settingsImageView" destination="yvC-Sw-8Jd" id="EzB-tH-X8U"/>
                         <outlet property="settingsScrollView" destination="fdZ-NJ-6l5" id="AoV-1N-3hy"/>
+                        <segue destination="wmO-xE-bbN" kind="modal" identifier="signedOutSegue" id="fDc-E2-siK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="scq-4m-k5d" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -123,6 +123,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func goBackFromSignIn(sender: AnyObject) {
+        print ("pressedBack")
             navigationController?.popViewControllerAnimated(true)
     }
     /*
